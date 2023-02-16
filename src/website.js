@@ -3,7 +3,7 @@ import createContact from "./contact";
 import createMenu from "./menu";
 
 function createNavButtons() {
-    console.log('aa');
+  
     const container = document.createElement('div');
     //home button
     const homeButton = document.createElement('button');
@@ -48,7 +48,7 @@ function setActive(buttonP) {
     const buttons = document.querySelectorAll(".navbut");
     buttons.forEach((button) => {
         if (button !== buttonP) {
-            console.log(button);
+           
             button.classList.remove("active");
         }
 
@@ -66,7 +66,7 @@ function createMain() {
 function initialize() {
     const content = document.getElementById("content");
     content.appendChild(createNavButtons());
-    console.log('app');
+    
     content.appendChild(createMain());
     setActive(document.querySelector(".navbut"));
     createHome();
