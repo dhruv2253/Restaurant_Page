@@ -1,9 +1,10 @@
 // contant page 
 
 
-const content = document.querySelector('#content');
+
 
 function contactload() {
+    const div = document.createElement('div');
     const para = document.createElement('p');
     para.classList.add('info');
 
@@ -17,11 +18,17 @@ function contactload() {
     img.src = "image7.jpg";
     img.alt = "pic";
 
-    content.appendChild(img);
-    content.appendChild(header);
-    content.appendChild(para);
-    return content;
+    div.appendChild(img);
+    div.appendChild(header);
+    div.appendChild(para);
+    return div;
 
 }
 
-export default contactload;
+function createContact() {
+    const main = document.getElementById('main');
+    main.textContent = '';
+    
+    main.appendChild(contactload());
+}
+export default createContact;

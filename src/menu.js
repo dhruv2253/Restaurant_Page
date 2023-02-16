@@ -1,7 +1,8 @@
 
-const content = document.querySelector('#content');
+
 
 function menuload() {
+    const div = document.createElement('div');
     const para = document.createElement('p');
     para.classList.add('info');
 
@@ -15,11 +16,16 @@ function menuload() {
     img.src = "image7.jpg";
     img.alt = "pic";
 
-    content.appendChild(img);
-    content.appendChild(header);
-    content.appendChild(para);
-    return content;
+    div.appendChild(img);
+    div.appendChild(header);
+    div.appendChild(para);
+    return div;
 
 }
 
-export default menuload;
+function createMenu() {
+    const main = document.getElementById('main');
+    main.textContent = '';
+    main.appendChild(menuload());
+}
+export default createMenu;
