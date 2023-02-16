@@ -1,1 +1,1 @@
-# Restaurant_Page
+Restaurant page practicing webpack and json.
